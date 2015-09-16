@@ -6,7 +6,7 @@
 	$arrTercero = array('Duber', 'Julian', 'Stiven');
 	$arrRecorrer;
 
-	$miSelect = $miSelect .= "<strong>Seleccione el Alumno: </strong>";
+	$miSelect = "<strong>Seleccione el Alumno: </strong>";
 	if($miGrado == 'Primero'){
 		$arrRecorrer = $arrPrimero;
 	}else if ($miGrado == 'Segundo'){

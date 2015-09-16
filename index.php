@@ -7,6 +7,7 @@
 </head>
 <body>
 	<form action="#">
+		<strong>Seleccione un Grado: </strong>
 		<select id="selectGrado" name="selectGrado">
 			<option value="Seleccione">Seleccione</option>
 			<option value="Primero">Primero</option>
@@ -18,12 +19,12 @@
 
 	<script>
 		//Funcion de JQuery
-		$( "#selectGrado").change(function() {
-			var grado = $("#selectGrado").val();
+		$("#selectGrado").change(function() {
+			var gradoVal = $("#selectGrado").val();
 			$.ajax({
 				method: "POST",
 				url: "procesarAjax.php",
-				data: { grado: grado}
+				data: { grado: gradoVal}
 			})
 
 			.done(function( msg ) {
