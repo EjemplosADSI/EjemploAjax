@@ -14,7 +14,7 @@
 			<option value="Segundo">Segundo</option>
 			<option value="Tercero">Tercero</option>
 		</select>
-		<div id="resultado"></div>
+		<div id="resultado"><strong>Seleccione un Alumno: </strong> <select id="selectAlumno" name="selectAlumno"> </select></div>
 	</form>
 
 	<script>
@@ -28,7 +28,7 @@
 			})
 
 			.done(function( msg ) {
-				$("#resultado").html(msg);
+				$("#selectAlumno").html(msg);
 			});
 		});
 	</script>

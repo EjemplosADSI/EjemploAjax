@@ -6,7 +6,7 @@
 	$arrTercero = array('Duber', 'Julian', 'Stiven');
 	$arrRecorrer;
 
-	$miSelect = "<strong>Seleccione el Alumno: </strong>";
+	$miSelect = "";
 	if($miGrado == 'Primero'){
 		$arrRecorrer = $arrPrimero;
 	}else if ($miGrado == 'Segundo'){
@@ -15,11 +15,9 @@
 		$arrRecorrer = $arrTercero;
 	}
 
-	$miSelect .= "<select id='alumno' name='alumno'>";
 	foreach ($arrRecorrer as $nombre) {
 		$miSelect .= "<option value=".$nombre.">".$nombre."</option>";
 	}
-	$miSelect .= "</select>";
 	
 	echo $miSelect;
  ?>
