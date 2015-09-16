@@ -4,23 +4,22 @@
 	$arrPrimero = array('Juan', 'Manuela', 'Alejandra', 'Pedro');
 	$arrSegundo = array('Miguel', 'Johana', 'Karen', 'Viviana');
 	$arrTercero = array('Duber', 'Julian', 'Stiven');
+	$arrRecorrer;
 
-	$miSelect = "";
+	$miSelect = $miSelect .= "<strong>Seleccione el Alumno: </strong>";
 	if($miGrado == 'Primero'){
-		$miSelect .= "<select id='alumno' name='alumno'>";
-		foreach ($arrPrimero as $nombre) {
-			$miSelect .= "<option value=".$nombre.">".$nombre."</option>";
-		}
-		$miSelect .= "</select>";
+		$arrRecorrer = $arrPrimero;
+	}else if ($miGrado == 'Segundo'){
+		$arrRecorrer = $arrSegundo;
+	}else if ($miGrado == 'Tercero'){
+		$arrRecorrer = $arrTercero;
 	}
 
-	if($miGrado == 'Segundo'){
-		$miSelect .= "<select id='alumno' name='alumno'>";
-		foreach ($arrSegundo as $nombre) {
-			$miSelect .= "<option value=".$nombre.">".$nombre."</option>";
-		}
-		$miSelect .= "</select>";
+	$miSelect .= "<select id='alumno' name='alumno'>";
+	foreach ($arrRecorrer as $nombre) {
+		$miSelect .= "<option value=".$nombre.">".$nombre."</option>";
 	}
-
+	$miSelect .= "</select>";
+	
 	echo $miSelect;
  ?>
